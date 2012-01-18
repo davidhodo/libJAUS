@@ -1,0 +1,6 @@
+VariantDir('Build', '.', duplicate=0)
+sources = ['Build/AccelerationStateSensorService.cpp', 'Build/AccelerationStateSensor_ReceiveFSM.cpp', 'Build/AccelerationStateSensor_ReceiveFSM_sm.cpp', 'Build/AccelerationStateSensor_SendFSM.cpp', 'Build/AccelerationStateSensor_SendFSM_sm.cpp', 'Build/InternalEvents/BroadcastGlobal.cpp', 'Build/InternalEvents/BroadcastLocal.cpp', 'Build/InternalEvents/EventError.cpp', 'Build/InternalEvents/EventOccurred.cpp', 'Build/Messages/CancelEvent.cpp', 'Build/Messages/ConfirmEventRequest.cpp', 'Build/Messages/CreateEvent.cpp', 'Build/Messages/Event.cpp', 'Build/Messages/QueryAccelerationState.cpp', 'Build/Messages/QueryEvents.cpp', 'Build/Messages/RejectEventRequest.cpp', 'Build/Messages/ReportAccelerationState.cpp', 'Build/Messages/ReportEvents.cpp', 'Build/Messages/UpdateEvent.cpp']
+Import('env')
+lib = env.SharedLibrary('./lib/AccelerationStateSensorService', sources, LIBS=['Common', 'EventsService', 'TransportService'])
+env.Install( env['INSTALL_LIB'], lib )
+env.Install( env['BINPATH'], lib )
