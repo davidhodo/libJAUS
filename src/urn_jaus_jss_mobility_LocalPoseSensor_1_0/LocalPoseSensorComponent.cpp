@@ -1,6 +1,5 @@
 
-
-#include "LocalPoseSensorComponent.h"
+#include "urn_jaus_jss_mobility_LocalPoseSensor_1_0/LocalPoseSensorComponent.h"
 #include "JausUtils.h"
 
 using namespace JTS;
@@ -8,6 +7,7 @@ using namespace libJAUS;
 using namespace urn_jaus_jss_core_Transport_1_0;
 using namespace urn_jaus_jss_core_Events_1_0;
 using namespace urn_jaus_jss_core_AccessControl_1_0;
+using namespace urn_jaus_jss_mobility_LocalPoseSensor_1_0;
 
 LocalPoseSensorComponent::LocalPoseSensorComponent(unsigned int subsystem, unsigned short node, unsigned short component)
 {
